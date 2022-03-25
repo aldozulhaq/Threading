@@ -60,8 +60,14 @@ int main()
 	// Memulai thread odd
 	thread even(print, (2.5), "even", (limit));
 
+	// print "thread odd, even mulai"
+	cout << "thread odd, even mulai" << endl;
+
 	// Menunggu thread odd untuk selesai
 	odd.join();
 	// Menunggu thread even untuk selesai
 	even.join();
+
+	// print selesai
+	cout << "selesai";
 }
